@@ -1,0 +1,57 @@
+body {
+    background-color: #1a202c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.clock-container {
+    text-align: center;
+}
+
+.clock {
+    font-family: "Arial", sans-serif;
+    font-size: 4rem;
+    color: #f8f8f8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: color 0.5s;
+}
+
+.digit {
+    background-color: #4a5568;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin: 0.2rem;
+    transition: background-color 0.5s;
+}
+
+.colon {
+    color: #f56565;
+}
+
+.ampm {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    color: #63b3ed;
+}
+
+.date-container {
+    background-color: #2d3748;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.date {
+    font-size: 1.5rem;
+    color: #a0aec0;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #63b3ed;
+    margin-bottom: 2rem;
+}
