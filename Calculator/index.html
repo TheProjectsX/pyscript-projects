@@ -25,8 +25,22 @@
     ></script>
 
     <script type="py" src="./script.py" defer></script>
+
+    <!-- Shows Loader while PyScript is loading -->
+    <script type="module">
+      const loading = document.getElementById("loading");
+      addEventListener("py:ready", () => loading.close());
+      loading.showModal();
+    </script>
   </head>
   <body>
+    <dialog id="loading">
+      <div class="loader">
+        <img src="loading.svg" alt="loading" />
+        <h1>Loading...</h1>
+      </div>
+    </dialog>
+
     <div class="calculator">
       <div class="calculator-title">Simple Calculator</div>
       <input

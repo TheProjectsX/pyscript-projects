@@ -124,6 +124,6 @@ dialog {
     color: white;
 }
 
-dialog img {
+.loader img {
     width: 60px;
 }

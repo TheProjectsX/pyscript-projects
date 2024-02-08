@@ -25,8 +25,22 @@
     ></script>
 
     <script type="py" src="./script.py" async defer></script>
+
+    <!-- Shows Loader while PyScript is loading -->
+    <script type="module">
+      const loading = document.getElementById("loading");
+      addEventListener("py:ready", () => loading.close());
+      loading.showModal();
+    </script>
   </head>
   <body>
+    <dialog id="loading">
+      <div class="loader">
+        <img src="loading.svg" alt="loading" />
+        <h1>Loading...</h1>
+      </div>
+    </dialog>
+
     <div class="title">Digital Clock</div>
     <main>
       <div class="clock-container">

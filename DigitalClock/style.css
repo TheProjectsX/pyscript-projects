@@ -61,7 +61,28 @@ main {
 }
 
 
+/* Loader */
+dialog:-internal-dialog-in-top-layer::backdrop {
+    background: #11111160;
+}
 
+dialog {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.loader img {
+    width: 60px;
+}
 
 /* Media Query for Smaller Screens */
 @media screen and (max-width: 600px) {
