@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery Shop Billing System</title>
+    <!-- CSS and Font -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Py Script -->
+    <link
+      rel="stylesheet"
+      href="https://pyscript.net/releases/2024.1.3/core.css"
+    />
+    <script
+      type="module"
+      src="https://pyscript.net/releases/2024.1.3/core.js"
+    ></script>
+
+    <script type="py" src="./script.py" defer></script>
+
+    <!-- Shows Loader while PyScript is loading -->
+    <script type="module">
+      const loading = document.getElementById("loading");
+      addEventListener("py:ready", () => loading.close());
+      loading.showModal();
+    </script>
+  </head>
+  <body>
+    <dialog id="loading">
+      <div class="loader">
+        <img src="loading.svg" alt="loading" />
+        <h1>Loading...</h1>
+      </div>
+    </dialog>
+
+    <div id="billing-container">
+      <h2>Grocery Shop Billing System</h2>
+
+      <label for="item">Select Item:</label>
+      <select id="item">
+        <option value="placeholder" hidden>Choose Item</option>
+        <option value="tshirt">T-Shirt</option>
+        <option value="jeans">Jeans</option>
+        <option value="shoes">Shoes</option>
+        <!-- Add more options as needed -->
+      </select>
+
+      <label for="quantity">Item Quantity:</label>
+      <input type="number" id="quantity" placeholder="Enter Quantity" />
+
+      <label for="discount">Discount (%):</label>
+      <input type="number" id="discount" placeholder="Enter Discount" />
+
+      <label for="tax">Tax (%):</label>
+      <input type="number" id="tax" placeholder="Enter Tax" />
+
+      <div class="message" id="message"></div>
+
+      <div class="buttons">
+        <button class="clear" py-click="clear_data">Clear Data</button>
+        <button class="add" py-click="add_item">Add Item</button>
+        <button class="calculate" py-click="calculate_data">Calculate</button>
+      </div>
+    </div>
+
+    <!-- Popup dialog -->
+    <dialog id="billing-popup">
+      <h2>Billing Details</h2>
+      <div class="billing-container" id="popup-billing-container">
+        <!-- <div class="bill-item">
+          <p><strong>Item:</strong> <span id="popup-item"></span></p>
+          <p><strong>Amount:</strong> <span id="popup-amount"></span></p>
+          <p><strong>Discount:</strong> <span id="popup-discount"></span></p>
+          <p><strong>Tax:</strong> <span id="popup-tax"></span></p>
+          <p><strong>Total:</strong> <span id="popup-total"></span></p>
+        </div> -->
+      </div>
+      <button py-click="close_popup">Close</button>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+body {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#billing-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+select:focus,
+input:focus {
+    border-color: dodgerblue;
+}
+
+select {
+    cursor: pointer;
+}
+
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    color: #ffffff;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.clear {
+    background-color: rgb(255, 25, 25);
+}
+
+.add {
+    background-color: dodgerblue;
+}
+
+.calculate {
+    background-color: #4caf50;
+}
+
+button:hover {
+    background-color: #888;
+}
+
+.message {
+    margin-bottom: 15px;
+    color: red;
+    text-align: center;
+}
+
+/* Loader */
+dialog:-internal-dialog-in-top-layer::backdrop {
+    background: #11111160;
+}
+
+dialog {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding-block: 30px;
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.loader img {
+    width: 60px;
+}
+
+/* Styles for the PopUp */
+#billing-popup:-internal-dialog-in-top-layer::backdrop {
+    background: #11111160;
+}
+
+#billing-popup {
+    background-color: #444;
+    border: 1px solid #666;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 20px 34px;
+}
+
+#billing-popup::-webkit-scrollbar {
+    display: none;
+}
+
+#billing-popup h2 {
+    margin-block: 0 25px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+#billing-popup p {
+    padding-block: 10px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 250px;
+}
+
+.bill-item p {
+    border-bottom: 2px solid #888;
+
+}
+
+.bill-item p:last-child {
+    border-bottom: 0;
+    margin-bottom: 20px;
+}
+
+#billing-popup button {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-inline: auto;
+}
+
+#billing-popup button:hover {
+    background-color: #45a049;
+}
+
+.bill-item {
+    margin-bottom: 20px;
+}
+
+.bill-item:last-child {
+    margin-bottom: 0;
+}
+
+#billing-popup .amount-to-pay {
+    padding-block: 16px;
+    border-top: 3px solid #222;
+    font-size: 1.1rem;
+}
+
+#billing-popup button {
+    font-size: 18px;
+    padding: 10px 20px;
+}
