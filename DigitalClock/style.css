@@ -1,18 +1,21 @@
 body {
     background-color: #1a202c;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Ubuntu', sans-serif;
+    margin-block: 5rem;
 }
 
 .title {
     font-size: 3rem;
     font-weight: 700;
     color: #63b3ed;
-    margin-bottom: 6rem;
+    text-align: center;
+    margin-block: 2rem;
 }
 
 .clock-container {
