@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+
+    <!-- CSS and Font -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Py Script -->
+    <link
+      rel="stylesheet"
+      href="https://pyscript.net/releases/2024.1.3/core.css"
+    />
+    <script
+      type="module"
+      src="https://pyscript.net/releases/2024.1.3/core.js"
+    ></script>
+
+    <script type="py" src="./script.py" async defer></script>
+
+    <!-- Shows Loader while PyScript is loading -->
+    <script type="module">
+      const loading = document.getElementById("loading");
+      addEventListener("py:ready", () => loading.close());
+      loading.showModal();
+    </script>
+  </head>
+  <body>
+    <dialog id="loading">
+      <div class="loader">
+        <img src="loading.svg" alt="loading" />
+        <h1>Loading...</h1>
+      </div>
+    </dialog>
+    <div id="password-generator">
+      <h1>Password Generator</h1>
+      <div class="password-view">
+        <p>Your Password:</p>
+        <p id="password">&nbsp;</p>
+      </div>
+      <label for="password-length" class="pass-length"
+        >Password Length:
+        <input type="number" id="password-length" min="6" max="30" value="6"
+      /></label>
+
+      <label class="extra-option"
+        ><input type="checkbox" id="uppercase" checked /> Uppercase</label
+      >
+      <label class="extra-option"
+        ><input type="checkbox" id="lowercase" checked /> Lowercase</label
+      >
+      <label class="extra-option"
+        ><input type="checkbox" id="special-characters" checked /> Special
+        Characters</label
+      >
+      <label class="extra-option"
+        ><input type="checkbox" id="numbers" checked /> Numbers</label
+      >
+
+      <button py-click="generate_password">Generate Password</button>
+      <div class="message" id="message"></div>
+    </div>
+  </body>
+</html>
