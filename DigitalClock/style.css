@@ -8,6 +8,13 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #63b3ed;
+    margin-bottom: 6rem;
+}
+
 .clock-container {
     text-align: center;
 }
@@ -50,9 +57,25 @@ body {
     color: #a0aec0;
 }
 
-.title {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #63b3ed;
-    margin-bottom: 2rem;
+
+
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 600px) {
+
+    .title {
+        margin-bottom: 3rem;
+    }
+
+    .clock {
+        font-size: 1rem;
+    }
+
+    .ampm {
+        font-size: 0.8rem;
+    }
+
+    .date {
+        font-size: 1rem;
+    }
 }
