@@ -10,7 +10,7 @@ def updateTime():
     now = datetime.now()
 
     # Extract Time
-    hour_now = now.strftime("%H")   # HH
+    hour_now = now.strftime("%I")   # HH
     minute_now = now.strftime("%M")   # MM
     second_now = now.strftime("%S")  # SS
     ampm_now = now.strftime("%p")   # AM/PM
