@@ -3,17 +3,13 @@ from pyscript import document, display
 # Calculator Display Element
 calculatorDisplay = document.getElementById("calculator-display")
 
-# Error Message
-message = False
-
-
 # Add Value to the Calculator Display
+
+
 def add_value(event):
     notSupported = ["+0", "-0", "/0", "*0"]
 
-    if (message):
-        display("", target="message", append=False)
-        message = False
+    display("", target="message", append=False)
 
     oldValue = calculatorDisplay.value
 
@@ -45,7 +41,6 @@ def show_result(event):
         result = eval(values)
     except ZeroDivisionError:
         display("Cannot Divide by Zero", target="message", append=False)
-        message = True
     except:
         pass
 
