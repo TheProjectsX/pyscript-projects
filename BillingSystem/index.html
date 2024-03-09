@@ -13,6 +13,9 @@
       rel="stylesheet"
     />
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+
     <!-- Py Script -->
     <link
       rel="stylesheet"
@@ -35,7 +38,7 @@
   <body>
     <dialog id="loading">
       <div class="loader">
-        <img src="loading.svg" alt="loading" />
+        <img src="assets/loading.svg" alt="loading" />
         <h1>Loading...</h1>
       </div>
     </dialog>
@@ -46,9 +49,9 @@
       <label for="item">Select Item:</label>
       <select id="item">
         <option value="placeholder" hidden>Choose Item</option>
-        <option value="tshirt">T-Shirt</option>
+        <!-- <option value="tshirt">T-Shirt</option>
         <option value="jeans">Jeans</option>
-        <option value="shoes">Shoes</option>
+        <option value="shoes">Shoes</option> -->
         <!-- Add more options as needed -->
       </select>
 
@@ -74,6 +77,7 @@
     <dialog id="billing-popup">
       <h2>Billing Details</h2>
       <div class="billing-container" id="popup-billing-container">
+        <!-- Example Bill Page -->
         <!-- <div class="bill-item">
           <p><strong>Item:</strong> <span id="popup-item"></span></p>
           <p><strong>Amount:</strong> <span id="popup-amount"></span></p>
@@ -82,7 +86,10 @@
           <p><strong>Total:</strong> <span id="popup-total"></span></p>
         </div> -->
       </div>
-      <button py-click="close_popup">Close</button>
+      <div class="buttons">
+        <button py-click="close_popup" class="close">Close</button>
+        <button py-click="print_bill" class="print">Print</button>
+      </div>
     </dialog>
   </body>
 </html>

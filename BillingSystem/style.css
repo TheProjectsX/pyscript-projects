@@ -67,7 +67,6 @@ button {
     cursor: pointer;
 }
 
-
 .clear {
     background-color: rgb(255, 25, 25);
 }
@@ -83,6 +82,12 @@ button {
 button:hover {
     background-color: #888;
 }
+
+button:active {
+    background-color: white;
+    color: black;
+}
+
 
 .message {
     margin-bottom: 15px;
@@ -125,7 +130,7 @@ dialog {
     border: 1px solid #666;
     border-radius: 5px;
     color: #ffffff;
-    padding: 20px 34px;
+    padding: 30px 35px 20px;
 }
 
 #billing-popup::-webkit-scrollbar {
@@ -158,19 +163,56 @@ dialog {
     margin-bottom: 20px;
 }
 
+#billing-popup .buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+@media print {
+    body>* {
+        display: none;
+    }
+
+    #billing-popup {
+        display: block;
+    }
+
+    #billing-popup .buttons {
+        display: none;
+    }
+
+    #billing-popup * {
+        color: black;
+    }
+}
+
 #billing-popup button {
-    background-color: #4caf50;
     color: #ffffff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     display: block;
-    margin-inline: auto;
+    font-size: 18px;
 }
 
-#billing-popup button:hover {
+#billing-popup .close {
+    background-color: #4caf50;
+}
+
+#billing-popup .print {
+    background-color: #1e90ff;
+}
+
+#billing-popup .close:hover {
     background-color: #45a049;
+}
+
+
+#billing-popup .print:hover {
+    background-color: #178afd;
 }
 
 .bill-item {
@@ -185,9 +227,4 @@ dialog {
     padding-block: 16px;
     border-top: 3px solid #222;
     font-size: 1.1rem;
-}
-
-#billing-popup button {
-    font-size: 18px;
-    padding: 10px 20px;
 }
