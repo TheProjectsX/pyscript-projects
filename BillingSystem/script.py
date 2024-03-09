@@ -110,7 +110,7 @@ def add_item(event):
         display("Choose an Item First!", target="message", append=False)
         return
     elif (elm_quantity.value == ""):
-        display("Enter Amount First!", target="message", append=False)
+        display("Enter Quantity First!", target="message", append=False)
         return
 
     display("", target="message", append=False)
